@@ -30,3 +30,16 @@ This repository serves as a practical, hands-on portfolio of entry-level IT Supp
   * Guided the user through signing back into their desktop using their credentials.
   * Launched the enterprise VPN client and verified successful authentication and tunnel establishment.
 * **Result:** Corporate VPN connected successfully, internal network reachability restored, and user verified full access to internal marketing resources. Issue resolved.
+
+---
+
+### Ticket #INC0012860: Cross-Department Transfer Access Control & Permission Revocation
+* **User Issue:** Employee transferred from Engineering to IT Infrastructure and required access to new team file shares and toolsets while revoking legacy access.
+* **Environment:** Active Directory Users & Computers (ADUC) / Enterprise Role-Based Access Control (RBAC)
+* **Diagnosis:** Verified transfer request and confirmed target security groups required for IT Infrastructure versus legacy Engineering permissions.
+* **Action Taken:**
+  * Located the target user object in Active Directory and navigated to the **Member Of** / Groups settings.
+  * Applied the **Principle of Least Privilege** by removing user membership from all legacy Engineering security groups to prevent permission creep.
+  * Provisioned user membership into required IT Infrastructure security groups to grant appropriate folder and toolset access.
+  * Verified updated group memberships and documented security audit trail in the ticketing system.
+* **Result:** User access successfully updated to reflect new role; legacy permissions revoked per company security policy. Ticket resolved.
