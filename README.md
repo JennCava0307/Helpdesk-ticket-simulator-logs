@@ -43,3 +43,17 @@ This repository serves as a practical, hands-on portfolio of entry-level IT Supp
   * Provisioned user membership into required IT Infrastructure security groups to grant appropriate folder and toolset access.
   * Verified updated group memberships and documented security audit trail in the ticketing system.
 * **Result:** User access successfully updated to reflect new role; legacy permissions revoked per company security policy. Ticket resolved.
+
+---
+
+### Ticket #INC962347: Network Printer Mapping & Connection Failure
+* **User Issue:** User on Floor 3 unable to send print jobs to shared network printer ("Floor 3 Printer C").
+* **Environment:** Windows 11 Enterprise / TCP/IP Network Printing / Remote Desktop Protocol (RDP)
+* **Diagnosis:** Identified incorrect port configuration and invalid host mapping on the client workstation preventing communication with the print queue.
+* **Action Taken:**
+  * Network verified the target printer's static IP address and hostname via network management console.
+  * Established a Remote Desktop (RDP) session to the user's workstation.
+  * Removed the disconnected/stale printer instance from Windows **Settings > Devices & Printers**.
+  * Manually re-added the network printer using its direct Hostname / TCP/IP address and verified driver installation.
+  * Sent a test print page to confirm hardware communication and queue clearance.
+* **Result:** Floor 3 Printer C re-mapped successfully; test page printed without error. Ticket resolved.
