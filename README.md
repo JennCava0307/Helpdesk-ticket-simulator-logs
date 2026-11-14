@@ -67,3 +67,27 @@ This repository serves as a practical, hands-on portfolio of entry-level IT Supp
 * **Action Taken:**
 * Created a new user object in the appropriate Organizational Unit (OU) with standard naming conventions (First.Last).Configured user account details including display name, username, primary SMTP email address, and temporary secure credentials.Added the new user to the SG-Marketing-Team security group for shared drive access and the SG-Print-Marketing-HQ security group for regional color printer mapping.
 * **Result:** User account successfully provisioned, licensed in Microsoft 365, and verified in Active Directory with correct printer group policies applied. Ticket resolved.  
+
+---
+
+### Ticket #INC0012855: Network Printer Showing Offline - TCP/IP Reconnection & Port Re-mapping
+
+* **User Issue:** User reported that their office printer has been showing as offline and failing to print since yesterday, suspecting the issue began following network maintenance over the weekend. Restarting the local computer did not resolve the offline status.
+
+* **Environment:** Windows 10/11 Workstation / Network Print Server / TCP/IP Network Printer
+
+* **Diagnosis:** Checked internal IT documentation under Tools > Documentation and verified the correct static IP address for the target print server and printer. Determined that the local printer queue had lost communication with the host IP address due to post-maintenance network routing changes.
+
+* **Action Taken:**
+
+* Remotely connected to the user's desktop via remote support tools.
+
+* Navigated to Settings > Devices > Printers & Scanners, located the offline printer, and completely removed the unresponsive device queue.
+
+* Selected "Add a printer or scanner" and clicked the prompt stating "The printer that I want isn't listed."
+
+* Chose the option to "Add a printer using a TCP/IP address or hostname" and entered the correct printer IP address retrieved from documentation.
+
+* Completed the wizard to establish a direct TCP/IP port connection and successfully ran a test print page.
+
+* **Result:** Test page printed successfully, and the user confirmed that normal printing functionality has been restored. Ticket resolved.
