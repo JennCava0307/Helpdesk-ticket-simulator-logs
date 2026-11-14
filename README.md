@@ -57,3 +57,13 @@ This repository serves as a practical, hands-on portfolio of entry-level IT Supp
   * Manually re-added the network printer using its direct Hostname / TCP/IP address and verified driver installation.
   * Sent a test print page to confirm hardware communication and queue clearance.
 * **Result:** Floor 3 Printer C re-mapped successfully; test page printed without error. Ticket resolved.
+
+---
+
+### Ticket #INC589623: New Hire Onboarding - Marketing Designer Access Provisioning
+* **User Issue:** HR submitted an onboarding request for a new marketing designer needing computer access, email setup, and specific departmental security group permissions.
+* **Environment:** Windows Server / Active Directory Users & Computers (ADUC) / Microsoft 365
+* **Diagnosis:** Identified required department, manager, and role-based permissions based on the onboarding ticket request, specifically requiring marketing team access and network printer mapping.
+* **Action Taken:**
+* Created a new user object in the appropriate Organizational Unit (OU) with standard naming conventions (First.Last).Configured user account details including display name, username, primary SMTP email address, and temporary secure credentials.Added the new user to the SG-Marketing-Team security group for shared drive access and the SG-Print-Marketing-HQ security group for regional color printer mapping.
+* **Result:** User account successfully provisioned, licensed in Microsoft 365, and verified in Active Directory with correct printer group policies applied. Ticket resolved.  
